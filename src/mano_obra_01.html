@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+body {
+  background-color: #CFE2F3;
+}
+</style>
+
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  </head>
+  <body>
+    <form id="myform">
+    <div class="block form-group">
+    <label for="codigo">Codigo</label>
+    <input type='text' name='codigo' id="codigo" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="descripcion">Descripción</label>
+    <input type='text' name='descripcion' id="descripcion" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="unidad">Unidad</label>
+    <input type='text' name='unidad' id="unidad" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="costo_pen">Costo (PEN)</label>
+    <input type='text' name='costo_pen' id="costo_pen" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="basico">Basico</label>
+    <input type='text' name='basico' id="basico" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="gratificacion">% Gratificación</label>
+    <input type='text' name='gratificacion' id="gratificacion" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="vacaciones">% Vacaciones</label>
+    <input type='text' name='vacaciones' id="vacaciones" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="transporte">% Transporte</label>
+    <input type='text' name='transporte' id="transporte" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="alimentacion">% Alimentación</label>
+    <input type='text' name='alimentacion' id="alimentacion" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="nocturno">% Bono nocturno</label>
+    <input type='text' name='nocturno' id="nocturno" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="bonificacion">% Total bonificación</label>
+    <input type='text' name='bonificacion' id="bonificacion" required="required"/>
+    </div>
+    
+    <div class="form-group col-md-6">
+      <label for="fecha">Fecha</label>
+      <input type="date" class="form-control" id="fecha" name="fecha">
+    </div>
+    
+    <div class="block">
+    <button type="submit" class="action">Submit</button>
+    </div>
+    </form>
+    <script>
+    document.querySelector("#myform").addEventListener("submit", function(e){
+    e.preventDefault();    //stop form from submitting
+    google.script.run.agregar_insumo_desde_formulario(this);
+    google.script.host.close();//close this dialogbox
+    });
+</script>
+  </body>
+</html>

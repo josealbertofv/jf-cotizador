@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+body {
+  background-color: #CFE2F3;
+}
+</style>
+
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  </head>
+  <body>
+    <form id="myform">
+    <div class="block form-group">
+    <label for="codigo">Codigo</label>
+    <input type='text' name='codigo' id="codigo" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="descripcion">Descripción</label>
+    <input type='text' name='descripcion' id="descripcion" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="unidad">Unidad</label>
+    <input type='text' name='unidad' id="unidad" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="costo_pen">Costo (PEN)</label>
+    <input type='text' name='costo_pen' id="costo_pen" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="marca">Marca</label>
+    <input type='text' name='marca' id="marca" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="proveedor">Proveedor</label>
+    <input type='text' name='proveedor' id="proveedor" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="url">URL</label>
+    <input type='text' name='url' id="url" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="peso_kg">Peso (Kg)</label>
+    <input type='text' name='peso_kg' id="peso_kg" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="volumen">Volumen (m3)</label>
+    <input type='text' name='volumen' id="volumen" required="required"/>
+    </div>
+    
+    <div class="block form-group">
+    <label for="hoja_tecnica">Hoja técnica</label>
+    <input type='text' name='hoja_tecnica' id="hoja_tecnica" required="required"/>
+    </div>
+    
+    <div class="form-group col-md-6">
+      <label for="fecha">Fecha</label>
+      <input type="date" class="form-control" id="fecha" name="fecha">
+    </div>
+    
+    <div class="block">
+    <button type="submit" class="action">Submit</button>
+    </div>
+    </form>
+    <script>
+    document.querySelector("#myform").addEventListener("submit", function(e){
+    e.preventDefault();    //stop form from submitting
+    google.script.run.agregar_insumo_desde_formulario(this);
+    google.script.host.close();//close this dialogbox
+    });
+</script>
+  </body>
+</html>
