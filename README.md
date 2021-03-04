@@ -8,7 +8,7 @@ Instructions to install clasp, in order to work with Google Apps Scripts in vsco
 https://www.youtube.com/watch?v=4Qlt3p6N0es&t=262s
 
 (I) Instructions to install clasp
-<<<<<<< HEAD
+==
 
 (1) You need to make sure to have node js installed:
 
@@ -25,6 +25,7 @@ $ sudo npm install -g @google/clasp
 $ clasp -v
 
 (II) Instructions to pull the project
+==
 
 (1) Copy de Script ID:
 
@@ -35,35 +36,6 @@ https://script.google.com --> File --> Prject properties --> Info
 $ clasp login
 
 (3) Initialize a node js project inside the folder containing your project.
-=======
-
-(1) You need to make sure to have node js installed:
-
-$ node -v
-
-(2) You need to make sure to have Google Apps API turned on: script.google.com/home/usersettings
-
-(3) Then install clasp:
-
-$ sudo npm install -g @google/clasp
-
-(4) Check clasp version:
-
-$ clasp -v
-
-
-(II) Instructions to pull the project
-
-(1) Copy de Script ID:
-
-https://script.google.com --> File --> Prject properties --> Info
-
-(2) Log in with google:
-
-$ clasp login
-
-(3) Initialize a node js project inside the folder containing your project. 
->>>>>>> c028da9f4fe6602ca54d7f4d49e7a35c2a96b076
 
 $ /path/to/your/folder/ npm init
 
@@ -73,41 +45,33 @@ It will create /path/to/your/folder/package.json
 
 $ /path/to/your/folder/ clasp clone "Script ID" --rootDir src
 
-<<<<<<< HEAD
 It will create /path/to/your/folder/.clasp.json /path/to/your/folder/src/appsscript.json
-=======
+
 It will create
 /path/to/your/folder/.clasp.json
 /path/to/your/folder/src/appsscript.json
 
->>>>>>> c028da9f4fe6602ca54d7f4d49e7a35c2a96b076
-
 Once you make changes locally, you need to refresh those changes in the actual seerver.
 
+
 (III) Instructions to apply changes from local to the actual server
+==
 
 $ clasp push
 
-<<<<<<< HEAD
 $ clasp push -w // apply changes automatically while running this app
 
 To exit the app just press Ctrl + C
-=======
-$ clasp push -w    // apply changes automatically while running this app
 
-To exit the app just press Ctrl + C
-
->>>>>>> c028da9f4fe6602ca54d7f4d49e7a35c2a96b076
 
 (IV) Instructions to apply changes from remote
+==
 
 $ clasp pull
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c028da9f4fe6602ca54d7f4d49e7a35c2a96b076
 (V) To enable the autocomplete tool
+==
 
 Install TypeScript definitions for Apps Script in your project's folder, as it says here https://github.com/google/clasp/blob/master/docs/typescript.md
 
