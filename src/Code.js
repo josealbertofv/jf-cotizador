@@ -1,5 +1,7 @@
 // V-mar.03.2021
 // Mi marca desde ubuntu
+// Segunda, y espero que última, marca en ubuntu
+// Primera marca desde windows
 
 function onOpen() {
   crearMenu();
